@@ -1,0 +1,5 @@
+const express = require("express")
+const app = express()
+app.use("/css", express.static("node_modules/bootstrap/dist/css/bootstrap.min.css"))
+app.get("/home", (req,resp) => {resp.sendFile(__dirname + "/index.html")})
+app.listen(3000)
